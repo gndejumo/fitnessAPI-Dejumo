@@ -1,5 +1,7 @@
 //Routes Middleware
 const workoutRoutes = require("./routes/workout");
+const express = require('express');
+const mongoose = require('mongoose');
 const userRoutes = require("./routes/user");
 require('dotenv').config();
 const app = express();
