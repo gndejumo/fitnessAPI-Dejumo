@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const itemSchema = new mongoose.Schema({
+const workoutSchema = new mongoose.Schema({
 	
 	name: {
 		type: String,
