@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/addWorkout", verify, workoutController.addWorkout);
 router.get("/getMyWorkouts", verify, workoutController.getMyWorkouts);
 router.get("/completeWorkoutStatus", verify, workoutController.completeWorkoutStatus);
-router.put("/updateWorkout/:id", verify, workoutController.updateWorkout);
+router.patch("/updateWorkout/:id", verify, workoutController.updateWorkout);
 router.delete("/deleteWorkout", verify, workoutController.deleteWorkout);
 
 
