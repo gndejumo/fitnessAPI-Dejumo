@@ -1,4 +1,4 @@
-const Item = require("../models/Workout");
+const Workout = require("../models/Workout");
 
 module.exports.addWorkout = (req, res) => {
 	let newWorkout = new Workout({
@@ -19,7 +19,7 @@ module.exports.getMyWorkouts = (req, res) => {
 	Workout.find({})
 	.then(workouts => {
 
-	    if (items.length > 0){
+	    if (workouts.length > 0){
 	        return res.status(200).send({ workouts });
 	    }
 	    else {
