@@ -2,10 +2,16 @@ require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const workoutRoutes = require("./routes/workout");
 const userRoutes = require("./routes/user");
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 
 // Middleware to parse JSON
 app.use(express.json());
